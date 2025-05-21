@@ -30,12 +30,49 @@ typedef struct {
 } GPIO_TypeDef;
 
 typedef enum{
-    GPIO_MODE_INPUT     = 0x00,
-    GPIO_MODE_OUTPUT    = 0x01,
-    GPIO_MODE_ALTFUNC   = 0x02,
-    GPIO_MODE_ANALOG    = 0x03,
+    GPIO_MODE_INPUT       = 0x00,
+    GPIO_MODE_OUTPUT      = 0x01,
+    GPIO_MODE_ALTFUNC     = 0x02,
+    GPIO_MODE_ANALOG      = 0x03,
 } gpio_mode_t;
 
+typedef enum{
+    GPIO_OTYPE_PUSHPULL   = 0x00,
+    GPIO_OTYPE_OPENDRAIN  = 0x01,
+} gpio_type_t;
 
+typedef enum{
+    GPIO_SPEED_LOW        = 0x00,
+    GPIO_SPEED_MEDIUM     = 0x01,
+    GPIO_SPEED_FAST       = 0x02,
+    GPIO_SPEED_HIGH       = 0x03,
+} gpio_speed_t;
+
+typedef enum{
+    GPIO_NO_PULL          = 0x00,
+    GPIO_PULL_UP          = 0x01,
+    GPIO_PULL_DOWN        = 0x02,
+} gpio_pupdr_t;
+
+
+typedef struct{
+    uint16_t pin;
+    gpio_mode_t mode;
+    gpio_type_t otype;
+    gpio_speed_t speed;
+    gpio_pupdr_t pull;
+    
+} gpio_config_t;
+
+typedef enum {
+    GPIO_PORT_A  = 0,
+    GPIO_PORT_B,
+    GPIO_PORT_C,
+    GPIO_PORT_D,
+    GPIO_PORT_E,
+    GPIO_PORT_F,
+    GPIO_PORT_G,
+    GPIO_PORT_H
+} gpio_port_t;
 
 #endif //STM32F4_GPIO_H

@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "stdint.h": "c",
+        "hal_uart.h": "c",
+        "stm32f4_uart.h": "c"
+    }
+}

@@ -1,8 +1,49 @@
 #include "../hal_gpio.h"
 #include <stdint.h>
 
-static inline GPIO_TypeDef *get_gpio_port(uint8_t port_index){
-    return (GPIO_TypeDef *)(GPIOA + (0x400 * port_index));
+static inline GPIO_TypeDef *get_gpio_port(uint8_t port_index) {
+    static GPIO_TypeDef *const ports[] = {
+        GPIOA, GPIOB, GPIOC, GPIOD,
+        GPIOE, GPIOF, GPIOG, GPIOH
+    };
+
+    if (port_index > 7) return 0; // Defensive programming
+    return ports[port_index];
+}
+
+void gpio_init(gpio_config_t cfg){
+    uint8_t port_index = GET_PORT(cfg.pin);
+    uint8_t pin_num = GET_PIN(cfg.pin);
+    
+    GPIO_TypeDef *port = get_gpio_port(port_index);
+
+    port->MODER   &= ~(0x03 << (pin_num * 2));
+    port->OTYPER  &= ~(1 << pin_num);
+    port->OSPEEDR &= ~(0x03 << (pin_num * 2));
+    port->PUPDR   &= ~(0x03 << (pin_num * 2));
+    
+    port->MODER   |= ((cfg.mode & 0x03) << (pin_num * 2));
+    port->OTYPER  |= ((cfg.otype & 0x01) << pin_num);
+    port->OSPEEDR |= ((cfg.speed & 0x03) << (pin_num * 2));
+    port->PUPDR   |= ((cfg.pull & 0x03) << (pin_num * 2));
+
+
+}
+
+void gpio_set_af(uint16_t pin, uint8_t af){
+    uint8_t port_index = GET_PORT(pin);
+    uint8_t pin_num = GET_PIN(pin);
+
+    GPIO_TypeDef *port = get_gpio_port(port_index);
+
+    if(pin_num <= 7){
+        port->AFRH &= ~(0xF << (4 * pin));
+        port->AFRH |= (af << (4 * pin));
+    }else {
+        port->AFRL &= ~(0xF << (4 * pin));
+        port->AFRL |= (af << (4 * pin));
+    }
+
 }
 
 void gpio_mode(uint16_t gpio_pin, gpio_mode_t mode){
@@ -27,7 +68,6 @@ void gpio_write(uint16_t gpio_pin, uint8_t state){
     }else{
         port->BSRR = (1 << (pin_num + 16));        // bsrr state = 0, is reset
     }
-    
 }
 
 int gpio_read(uint16_t gpio_pin){

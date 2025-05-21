@@ -1,43 +1,48 @@
+#include "../hal_systick.h"
 #include "../hal_types.h"
 #include "../hal_gpio.h"
 #include "../hal_rcc.h"
-
-
-#define LED_OUT PIN('A', 5)
-#define LED_IN PIN('A', 6)
+#include "../hal_uart.h"
 
 int main(void){
-    rcc_enable_gpio(GET_PORT(LED_OUT));
-    gpio_mode(LED_OUT, GPIO_MODE_OUTPUT);
-    gpio_mode(LED_IN, GPIO_MODE_INPUT);
+    gpio_config_t led_cfg = {
+        .pin = PIN('A', 5),
+        .mode = GPIO_MODE_OUTPUT,
+        .otype = GPIO_OTYPE_PUSHPULL,
+        .speed = GPIO_SPEED_FAST,
+        .pull = GPIO_NO_PULL,
+    };
 
+    gpio_config_t uart_cfg ={   //pa2 is uart2_tx 
+        .pin = PIN('A', 2),
+        .mode = GPIO_MODE_ALTFUNC,
+        .otype = GPIO_OTYPE_PUSHPULL,
+        .speed = GPIO_SPEED_HIGH,
+        .pull = GPIO_NO_PULL
+    };
+    rcc_enable_gpio(GET_PORT(led_cfg.pin));
+    rcc_enable_uart(USART2);
+    gpio_init(led_cfg);
+    gpio_init(uart_cfg);
+    uart_init(USART2, 16000000, UART_BAUD_115200);
+    gpio_set_af(uart_cfg.pin, 7);
+
+    uart_print(USART2, "UART INITIALIZED!\r\n");
     while(1){
-        gpio_write(LED_OUT, 1);
 
+        gpio_write(led_cfg.pin, 1);
+
+        uart_print(USART2, "UART INITIALIZED!\r\n");
         for (volatile uint32_t i = 0; i < 800000; i++)
         {
             __asm__ volatile ("NOP");
         }
 
-        if(!gpio_read(LED_IN)){
-            while(1); // trap
-        }
-        
-        gpio_write(LED_OUT, 0);
+        gpio_write(led_cfg.pin, 0);
 
         for (volatile uint32_t i = 0; i < 800000; i++)
         {
             __asm__ volatile ("NOP");
         }
-
-
-        if(gpio_read(LED_IN)){
-            while(1); // trap
-        }
-        
-
     }
-
-
-    return 0;
 }
