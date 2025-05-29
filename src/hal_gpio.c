@@ -36,12 +36,12 @@ void gpio_set_af(uint16_t pin, uint8_t af){
 
     GPIO_TypeDef *port = get_gpio_port(port_index);
 
-    if(pin_num <= 7){
-        port->AFRH &= ~(0xF << (4 * pin));
-        port->AFRH |= (af << (4 * pin));
+    if (pin_num <= 7){
+        port->AFRL &= ~(0xF << (4 * pin_num));
+        port->AFRL |= (af << (4 * pin_num));
     }else {
-        port->AFRL &= ~(0xF << (4 * pin));
-        port->AFRL |= (af << (4 * pin));
+        port->AFRH &= ~(0xF << (4 * (pin_num - 8)));
+        port->AFRH |= (af << (4 * (pin_num - 8)));
     }
 
 }
