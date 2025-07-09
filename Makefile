@@ -1,0 +1,57 @@
+
+# === Paths ===
+BUILD_DIR = build
+SRC_DIRS = src core
+INC_DIR = include
+STARTUP = platform/stm32f4/startup.s
+LINKER = platform/stm32f4/linker.ld
+
+# === Tools ===
+CC = arm-none-eabi-gcc
+OBJCOPY = arm-none-eabi-objcopy
+
+CFLAGS = -mcpu=cortex-m4 -mthumb -Wall -O0 -g -ffreestanding -nostdlib -Isrc -Iinclude -Iinclude/registers
+LDFLAGS = -T$(LINKER)
+
+# === Sources & Objects ===
+C_SOURCES = $(foreach dir, $(SRC_DIRS), $(wildcard $(dir)/*.c))
+OBJ_FILES = $(patsubst $(SRC_DIR)/%.c, $(BUILD_DIR)/%.o, $(C_SOURCES))
+OBJ_FILES += $(BUILD_DIR)/startup.o
+BIN = $(BUILD_DIR)/main.bin
+
+# === Default Target ===
+all: $(BUILD_DIR)/main.elf
+
+# === Create Build Directory ===
+$(BUILD_DIR):
+	mkdir -p $(BUILD_DIR)
+
+# === Compile C Source Files ===
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.c | $(BUILD_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# === Compile Startup Assembly ===
+$(BUILD_DIR)/startup.o: $(STARTUP) | $(BUILD_DIR)
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# === Link ELF ===
+$(BUILD_DIR)/main.elf: $(OBJ_FILES)
+	$(CC) $(CFLAGS) $(OBJ_FILES) -o $@ $(LDFLAGS)
+
+# === Create BIN from ELF ===
+$(BIN): $(BUILD_DIR)/main.elf
+	$(OBJCOPY) -O binary $< $@
+
+# === Flash to Board ===
+flash: $(BIN)
+	st-flash write $< 0x08000000
+
+# === Debug ===
+debug: all
+	st-util & arm-none-eabi-gdb $(BUILD_DIR)/main.elf
+
+# === Clean ===
+clean:
+	rm -rf $(BUILD_DIR)
+
+.PHONY: all flash debug clean

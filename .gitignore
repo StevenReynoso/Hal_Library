@@ -1,0 +1,14 @@
+# Build output
+/build
+*.o
+*.elf
+*.bin
+*.map
+
+# Backup files
+*~
+
+# Editor/IDE crap
+.vscode/
+*.swp
+.DS_Store

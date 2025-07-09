@@ -1,3 +1,28 @@
+/**
+ * @file main.c
+ * @brief Entry point for STM32F411RE user application.
+ *
+ * This is the starting point for user code using the custom bare-metal HAL.
+ * 
+ * You can include your application logic inside the `main()` function.
+ * Peripherals such as GPIO, UART, SPI, timers, and SysTick can be initialized
+ * using the provided HAL functions. See each module’s documentation for usage examples.
+ *
+ * @note This file is intentionally left empty to let you build your application from scratch.
+ * You can refer to `main_template.c` or peripheral test files for working examples.
+ *
+ * @example
+ * @code
+ * int main(void) {
+ *     // Your initialization and loop code here
+ *     while (1) {
+ *         // Application loop
+ *     }
+ * }
+ * @endcode
+ */
+
+
 #include "../hal_types.h"
 
 
