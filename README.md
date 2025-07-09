@@ -1,6 +1,6 @@
 # STM32F4 HAL Library (Bare-Metal)
 
-This project is a custom Hardware Abstraction Layer (HAL) for the STM32F4 microcontroller series, specifically designed for the STM32F446RE. It provides direct, register-level control without relying on the STM32 HAL or CMSIS libraries. Built for Learning Purposes and to show what is going on underneath the hood.
+This project is a custom Hardware Abstraction Layer (HAL) for the STM32F4 microcontroller series, specifically designed for the STM32F446RE. It provides direct, register-level control without relying on the STM32 HAL or CMSIS libraries. Built for learning purposes and to show what is going on underneath the hood.
 
 ---
 
@@ -23,7 +23,7 @@ Hal_Library/
 ├── src/                   # All peripheral source files (hal_gpio.c, etc.)
 ├── include/               # Public headers (hal_gpio.h, etc.)
 │   └── registers/         # Peripheral register mappings (stm32f4_gpio.h, etc.)
-├── platform/stm32f4/      # Startup file and linker script
+├── platform/stm32f4/      # Contains Startup file and linker script
 ├── build/                 # Build artifacts (generated)
 ├── Makefile               # Build system
 └── README.md              # This file
@@ -36,7 +36,8 @@ Hal_Library/
 ### Dependencies
 
 * `arm-none-eabi-gcc`
-* `st-link` tools (for flashing and debug)
+* `stlink-tools` (provides `st-flash` and `st-util` for ST-Link programming/debugging)
+
 
 Install with:
 
@@ -89,9 +90,28 @@ gdb-multiarch build/main.elf
 
 Optional GDB commands:
 
-* `step` (single instruction)
+* `step`             (single instruction)
 * `break <function>` (set breakpoint)
+* info registers     (shows registers)
+* x/10i $pc          (disassemble instructions at PC)
 
+
+---
+
+## Doxygen Documentation
+
+To view the generated documentation in your browser, use the helper script:
+
+```bash
+./open_docs.sh
+```
+
+If the documentation hasn’t been generated yet, run:
+
+```bash
+doxygen Doxyfile
+```
+* Output HTML goes to `docs/html/index.html` by default.
 ---
 
 ## Common Issues

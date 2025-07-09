@@ -6,7 +6,7 @@
  * SPI1–SPI4 peripherals on STM32F4 devices. SPI is used for full-duplex serial
  * communication with external devices like sensors, displays, or memory chips.
  *
- * The layout is based on RM0090 Reference Manual.
+ * The layout is based on RM0390 Reference Manual.
  */
 
 #ifndef STM32F4_SPI_H
