@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['a_20hal_20hardware_20abstract_20layer_20for_20the_20stm32f4_20chip_0',['A HAL (Hardware Abstract Layer) for the STM32f4 chip.',['../md_README.html',1,'']]],
-  ['abstract_20layer_20for_20the_20stm32f4_20chip_1',['A HAL (Hardware Abstract Layer) for the STM32f4 chip.',['../md_README.html',1,'']]]
+  ['bare_20metal_0',['STM32F4 HAL Library (Bare-Metal)',['../md_README.html',1,'']]],
+  ['blinking_5flight_1',['Blinking_Light',['../md_Docs_2Examples_2Blinking__Light.html',1,'']]]
 ];

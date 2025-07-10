@@ -1,13 +1,12 @@
 var searchData=
 [
-  ['pin_0',['pin',['../structgpio__config__t.html#a5871cbb2be3825fc029ba2d87a061dd4',1,'gpio_config_t::pin'],['../stm32f4__gpio_8h.html#a152d375e59cbe77fd4b686fef2613abf',1,'PIN:&#160;stm32f4_gpio.h']]],
-  ['pin_20uint8_5ft_20af_1',['void gpio_set_af(uint16_t pin, uint8_t af);',['../md_Docs_2GPIO.html#autotoc_md5',1,'']]],
-  ['pin_20uint8_5ft_20value_2',['void gpio_write(uint16_t pin, uint8_t value);',['../md_Docs_2GPIO.html#autotoc_md3',1,'']]],
-  ['pllcfgr_3',['PLLCFGR',['../structRCC__TypeDef.html#acd1faae87d5dc755e43dfb424f9398bc',1,'RCC_TypeDef']]],
-  ['plli2scfgr_4',['PLLI2SCFGR',['../structRCC__TypeDef.html#a28295b4186848c5299bda3ad482f5081',1,'RCC_TypeDef']]],
-  ['pllsaicfgr_5',['PLLSAICFGR',['../structRCC__TypeDef.html#ae0043bdbc5d079f17bea6c8360375f6b',1,'RCC_TypeDef']]],
-  ['psc_6',['PSC',['../structTIM__TypeDef.html#aebaa22c6223c63151d71070db8ff5b96',1,'TIM_TypeDef']]],
-  ['pull_7',['pull',['../structgpio__config__t.html#a3458d780936a21a4b51f6a3b6aaa05d9',1,'gpio_config_t']]],
-  ['pupdr_8',['PUPDR',['../structGPIO__TypeDef.html#aa7aab884b95cc0fa5cfe71ff7a4c3508',1,'GPIO_TypeDef']]],
-  ['purpose_20input_20output_9',['GPIO (General Purpose Input Output)',['../md_Docs_2GPIO.html',1,'']]]
+  ['odr_0',['ODR',['../structGPIO__TypeDef.html#a845e01039cf7ad8cc6439c58748e42e5',1,'GPIO_TypeDef']]],
+  ['only_1',['Basic Example: Blinking LED using GPIO only',['../md_Docs_2Examples_2Blinking__Light.html#example_gpio_blink',1,'']]],
+  ['open_20file_20st_20flash_2',['&quot;cannot open file &apos;st-flash&apos;&quot;',['../md_README.html#autotoc_md27',1,'']]],
+  ['ospeedr_3',['OSPEEDR',['../structGPIO__TypeDef.html#afda46c61f05aaf46fa8e2a008510bac1',1,'GPIO_TypeDef']]],
+  ['otype_4',['otype',['../structgpio__config__t.html#a0b9f9ea6ea51266c20ed3e53375dc89c',1,'gpio_config_t']]],
+  ['otyper_5',['OTYPER',['../structGPIO__TypeDef.html#aa9134e0868c5ab51768b4e4a9bb9adfa',1,'GPIO_TypeDef']]],
+  ['output_6',['GPIO (General Purpose Input Output)',['../md_Docs_2GPIO.html',1,'']]],
+  ['output_20html_20goes_20to_20tt_20docs_20html_20index_20html_20tt_20by_20default_7',['* Output HTML goes to &lt;tt&gt;docs/html/index.html&lt;/tt&gt; by default.',['../md_README.html#autotoc_md23',1,'']]],
+  ['output_20uart_20logging_8',['Example: Basic PWM Output + UART Logging',['../md_Docs_2Examples_2PWM__USART.html#example_pwm_basic',1,'']]]
 ];

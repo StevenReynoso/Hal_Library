@@ -76,7 +76,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Register map for STM32F4 TIMx peripheral.  
+<p>TIMx register map structure.  
  <a href="structTIM__TypeDef.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="stm32f4__tim_8h_source.html">stm32f4_tim.h</a>&gt;</code></p>
@@ -125,14 +125,8 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a5f6c7a3d81a893b02c26ece41b8beb15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Register map for STM32F4 TIMx peripheral. </p>
-<p>Represents the memory layout of a typical timer. Use this with TIMx defines to access or configure timer features directly.</p>
-<dl class="section note"><dt>Note</dt><dd><ul>
-<li>TIM1 and TIM8 support all fields, including <code>RCR</code> and <code>BDTR</code>.</li>
-<li>Basic timers (TIM6, TIM7) lack many fields like <code>CCR1-CCR4</code>, <code>BDTR</code>, etc.</li>
-<li>General-purpose timers support capture/compare, but not break/dead-time. </li>
-</ul>
-</dd></dl>
+<div class="textblock"><p>TIMx register map structure. </p>
+<p>This struct maps the memory layout of a general-purpose or advanced TIMx peripheral. Not all fields are supported on all timers (e.g., TIM6/7). </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="aa574282b4226fefc866df9beea6f41cd" name="aa574282b4226fefc866df9beea6f41cd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa574282b4226fefc866df9beea6f41cd">&#9670;&#160;</a></span>ARR</h2>
@@ -145,7 +139,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Auto-Reload Register </p>
+<p>Auto-reload register </p>
 
 </div>
 </div>
@@ -160,7 +154,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Break and Dead-Time Register (Only TIM1, TIM8) </p>
+<p>Break and Dead-Time Register (advanced only) </p>
 
 </div>
 </div>
@@ -280,7 +274,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Counter </p>
+<p>Counter value </p>
 
 </div>
 </div>
@@ -400,7 +394,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Repetition Counter (Only TIM1, TIM8) </p>
+<p>Repetition counter (advanced timers only) </p>
 
 </div>
 </div>

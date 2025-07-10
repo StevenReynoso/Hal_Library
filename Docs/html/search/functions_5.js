@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['tim_5f1hz_5finit_0',['tim_1hz_init',['../hal__tim_8h.html#a49ad05cc6dff6fada2b6e489c9fa03f4',1,'tim_1hz_init(TIM_TypeDef *timx, uint32_t clk_hz):&#160;hal_tim.c'],['../hal__tim_8c.html#a49ad05cc6dff6fada2b6e489c9fa03f4',1,'tim_1hz_init(TIM_TypeDef *timx, uint32_t clk_hz):&#160;hal_tim.c']]]
+  ['tim_5f1hz_5finit_0',['tim_1hz_init',['../group__HAL__TIM__Functions.html#ga49ad05cc6dff6fada2b6e489c9fa03f4',1,'tim_1hz_init(TIM_TypeDef *timx, uint32_t clk_hz):&#160;hal_tim.c'],['../group__HAL__TIM__Functions.html#ga49ad05cc6dff6fada2b6e489c9fa03f4',1,'tim_1hz_init(TIM_TypeDef *timx, uint32_t clk_hz):&#160;hal_tim.c']]],
+  ['tim_5fpwm_5fconfig_5fchannel_1',['tim_pwm_config_channel',['../group__HAL__TIM__Functions.html#ga5f6414204eaa9c35c9138eba8b628d69',1,'tim_pwm_config_channel(TIM_TypeDef *timx, uint8_t channel, uint16_t duty):&#160;hal_tim.c'],['../group__HAL__TIM__Functions.html#ga5f6414204eaa9c35c9138eba8b628d69',1,'tim_pwm_config_channel(TIM_TypeDef *timx, uint8_t channel, uint16_t duty):&#160;hal_tim.c']]],
+  ['tim_5fpwm_5finit_2',['tim_pwm_init',['../group__HAL__TIM__Functions.html#gacc8258753267f07e8764d87dee7fd753',1,'tim_pwm_init(TIM_TypeDef *timx, uint16_t prescaler, uint16_t arr):&#160;hal_tim.c'],['../group__HAL__TIM__Functions.html#gacc8258753267f07e8764d87dee7fd753',1,'tim_pwm_init(TIM_TypeDef *timx, uint16_t prescaler, uint16_t arr):&#160;hal_tim.c']]],
+  ['tim_5fpwm_5fstart_3',['tim_pwm_start',['../group__HAL__TIM__Functions.html#gad1388d8ba166aa2d1f901889b6f74357',1,'tim_pwm_start(TIM_TypeDef *timx):&#160;hal_tim.c'],['../group__HAL__TIM__Functions.html#gad1388d8ba166aa2d1f901889b6f74357',1,'tim_pwm_start(TIM_TypeDef *timx):&#160;hal_tim.c']]]
 ];

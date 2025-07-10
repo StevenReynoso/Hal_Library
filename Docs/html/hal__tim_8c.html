@@ -79,7 +79,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Timer initialization for 1 Hz timebase using STM32F411RE general-purpose timers.  
+<p>Timer driver for STM32F446RE (PWM and basic timer functions).  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="hal__tim_8h_source.html">hal_tim.h</a>&quot;</code><br />
@@ -89,15 +89,15 @@ Include dependency graph for hal_tim.c:</div>
 <div class="dyncontent">
 <div class="center"><img src="hal__tim_8c__incl.png" border="0" usemap="#asrc_2hal__tim_8c" alt=""/></div>
 <map name="asrc_2hal__tim_8c" id="asrc_2hal__tim_8c">
-<area shape="rect" title="Timer initialization for 1 Hz timebase using STM32F411RE general&#45;purpose timers." alt="" coords="52,5,157,31"/>
+<area shape="rect" title="Timer driver for STM32F446RE (PWM and basic timer functions)." alt="" coords="52,5,157,31"/>
 <area shape="rect" title=" " alt="" coords="209,299,280,324"/>
 <area shape="poly" title=" " alt="" coords="95,33,62,72,27,129,15,160,9,191,11,221,25,249,35,258,51,267,96,282,196,301,195,306,94,287,49,272,32,263,21,252,6,223,3,191,10,159,23,126,58,69,91,29"/>
-<area shape="rect" href="hal__tim_8h.html" title="Basic timer initialization interface for STM32F411RE." alt="" coords="63,152,146,177"/>
+<area shape="rect" href="hal__tim_8h.html" title="Header for timer configuration functions (basic timer and PWM setup). *." alt="" coords="63,152,146,177"/>
 <area shape="poly" title=" " alt="" coords="107,31,107,138,102,138,102,31"/>
 <area shape="rect" href="hal__rcc_8h.html" title="Clock control utility functions for enabling STM32F4 peripherals." alt="" coords="204,79,284,104"/>
 <area shape="poly" title=" " alt="" coords="128,28,211,70,208,75,126,33"/>
 <area shape="poly" title=" " alt="" coords="84,180,62,194,42,212,31,231,31,240,36,249,60,266,101,281,196,300,195,306,100,286,58,271,32,252,26,241,26,229,38,208,59,190,81,175"/>
-<area shape="rect" href="stm32f4__tim_8h.html" title="STM32F446RE Timer peripheral base addresses and register map." alt="" coords="46,225,163,251"/>
+<area shape="rect" href="stm32f4__tim_8h.html" title="Register map and base addresses for STM32F446RE TIM peripherals." alt="" coords="46,225,163,251"/>
 <area shape="poly" title=" " alt="" coords="107,178,107,212,102,212,102,178"/>
 <area shape="poly" title=" " alt="" coords="128,248,211,290,208,295,126,253"/>
 <area shape="poly" title=" " alt="" coords="223,106,140,148,138,143,221,102"/>
@@ -120,55 +120,28 @@ Include dependency graph for hal_tim.c:</div>
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a49ad05cc6dff6fada2b6e489c9fa03f4" id="r_a49ad05cc6dff6fada2b6e489c9fa03f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hal__tim_8c.html#a49ad05cc6dff6fada2b6e489c9fa03f4">tim_1hz_init</a> (<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *timx, uint32_t clk_hz)</td></tr>
-<tr class="memdesc:a49ad05cc6dff6fada2b6e489c9fa03f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the specified timer to overflow at 1 Hz.  <br /></td></tr>
-<tr class="separator:a49ad05cc6dff6fada2b6e489c9fa03f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga49ad05cc6dff6fada2b6e489c9fa03f4" id="r_ga49ad05cc6dff6fada2b6e489c9fa03f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__HAL__TIM__Functions.html#ga49ad05cc6dff6fada2b6e489c9fa03f4">tim_1hz_init</a> (<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *timx, uint32_t clk_hz)</td></tr>
+<tr class="memdesc:ga49ad05cc6dff6fada2b6e489c9fa03f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize a timer to overflow every 1 second (1Hz).  <br /></td></tr>
+<tr class="separator:ga49ad05cc6dff6fada2b6e489c9fa03f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacc8258753267f07e8764d87dee7fd753" id="r_gacc8258753267f07e8764d87dee7fd753"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__HAL__TIM__Functions.html#gacc8258753267f07e8764d87dee7fd753">tim_pwm_init</a> (<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *timx, uint16_t prescaler, uint16_t arr)</td></tr>
+<tr class="memdesc:gacc8258753267f07e8764d87dee7fd753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure a timer for PWM generation (base setup only).  <br /></td></tr>
+<tr class="separator:gacc8258753267f07e8764d87dee7fd753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f6414204eaa9c35c9138eba8b628d69" id="r_ga5f6414204eaa9c35c9138eba8b628d69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__HAL__TIM__Functions.html#ga5f6414204eaa9c35c9138eba8b628d69">tim_pwm_config_channel</a> (<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *timx, uint8_t channel, uint16_t duty)</td></tr>
+<tr class="memdesc:ga5f6414204eaa9c35c9138eba8b628d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set up a specific PWM output channel on a timer.  <br /></td></tr>
+<tr class="separator:ga5f6414204eaa9c35c9138eba8b628d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1388d8ba166aa2d1f901889b6f74357" id="r_gad1388d8ba166aa2d1f901889b6f74357"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__HAL__TIM__Functions.html#gad1388d8ba166aa2d1f901889b6f74357">tim_pwm_start</a> (<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *timx)</td></tr>
+<tr class="memdesc:gad1388d8ba166aa2d1f901889b6f74357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the timer to begin PWM or counting.  <br /></td></tr>
+<tr class="separator:gad1388d8ba166aa2d1f901889b6f74357"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Timer initialization for 1 Hz timebase using STM32F411RE general-purpose timers. </p>
-<p>Implements a simple timer setup for generating a 1-second overflow interval using prescaler and auto-reload configuration. Intended for polling loops, LED blinking, or software timers. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a49ad05cc6dff6fada2b6e489c9fa03f4" name="a49ad05cc6dff6fada2b6e489c9fa03f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49ad05cc6dff6fada2b6e489c9fa03f4">&#9670;&#160;</a></span>tim_1hz_init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void tim_1hz_init </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *&#160;</td>
-          <td class="paramname"><em>timx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>clk_hz</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initializes the specified timer to overflow at 1 Hz. </p>
-<p>Initializes the specified timer to generate a 1 Hz timebase.</p>
-<p>This function calculates a prescaler and auto-reload value so that the timer overflows every 1 second. It assumes the timer is driven by <code>clk_hz</code>, which should be the correct APB1 or APB2 timer clock depending on the TIM peripheral.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">timx</td><td>Pointer to the timer peripheral (e.g., <code>TIM2</code>, <code>TIM3</code>, etc.) </td></tr>
-    <tr><td class="paramname">clk_hz</td><td>The timer input clock frequency in Hz.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>This function enables the timer but does not enable interrupts. You must call <code><a class="el" href="hal__rcc_8h.html#a13229e5fabc6d4b1de1f53946555750d" title="Enables the peripheral clock for a specific TIM instance.">rcc_enable_tim()</a></code> beforehand to ensure the clock is active. </dd></dl>
-
-</div>
-</div>
-</div><!-- contents -->
+<div class="textblock"><p>Timer driver for STM32F446RE (PWM and basic timer functions). </p>
+<p>This file provides simple timer functions for:</p><ul>
+<li>Generating basic delays (1 Hz overflow)</li>
+<li>Setting up PWM output (for motors, LEDs, etc.)</li>
+</ul>
+<p>This is part of a custom STM32F4 HAL written from scratch with no STM HAL or CMSIS. All register access is direct and uses only official STM32 documentation.</p>
+<dl class="section author"><dt>Author</dt><dd>Steven Reynoso </dd></dl>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8

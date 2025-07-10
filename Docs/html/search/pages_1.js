@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['chip_0',['A HAL (Hardware Abstract Layer) for the STM32f4 chip.',['../md_README.html',1,'']]]
+  ['general_20purpose_20input_20output_0',['GPIO (General Purpose Input Output)',['../md_Docs_2GPIO.html',1,'']]],
+  ['gpio_20general_20purpose_20input_20output_1',['GPIO (General Purpose Input Output)',['../md_Docs_2GPIO.html',1,'']]]
 ];

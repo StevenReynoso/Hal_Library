@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['input_20output_0',['GPIO (General Purpose Input Output)',['../md_Docs_2GPIO.html',1,'']]]
+  ['metal_0',['STM32F4 HAL Library (Bare-Metal)',['../md_README.html',1,'']]]
 ];

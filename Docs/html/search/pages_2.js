@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['for_20the_20stm32f4_20chip_0',['A HAL (Hardware Abstract Layer) for the STM32f4 chip.',['../md_README.html',1,'']]]
+  ['hal_20library_20bare_20metal_0',['STM32F4 HAL Library (Bare-Metal)',['../md_README.html',1,'']]]
 ];

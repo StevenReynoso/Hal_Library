@@ -79,7 +79,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Basic timer initialization interface for STM32F411RE.  
+<p>Header for timer configuration functions (basic timer and PWM setup). *.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 <code>#include &quot;<a class="el" href="stm32f4__tim_8h_source.html">stm32f4_tim.h</a>&quot;</code><br />
@@ -88,10 +88,10 @@ Include dependency graph for hal_tim.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="hal__tim_8h__incl.png" border="0" usemap="#ainclude_2hal__tim_8h" alt=""/></div>
 <map name="ainclude_2hal__tim_8h" id="ainclude_2hal__tim_8h">
-<area shape="rect" title="Basic timer initialization interface for STM32F411RE." alt="" coords="5,5,140,31"/>
+<area shape="rect" title="Header for timer configuration functions (basic timer and PWM setup). *." alt="" coords="5,5,140,31"/>
 <area shape="rect" title=" " alt="" coords="37,152,108,177"/>
 <area shape="poly" title=" " alt="" coords="69,32,60,53,53,79,54,110,63,139,58,140,48,111,47,78,55,52,64,30"/>
-<area shape="rect" href="stm32f4__tim_8h.html" title="STM32F446RE Timer peripheral base addresses and register map." alt="" coords="62,79,179,104"/>
+<area shape="rect" href="stm32f4__tim_8h.html" title="Register map and base addresses for STM32F446RE TIM peripherals." alt="" coords="62,79,179,104"/>
 <area shape="poly" title=" " alt="" coords="83,30,108,66,103,69,78,33"/>
 <area shape="poly" title=" " alt="" coords="115,106,90,142,86,139,111,103"/>
 </map>
@@ -101,14 +101,14 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="hal__tim_8h__dep__incl.png" border="0" usemap="#ainclude_2hal__tim_8hdep" alt=""/></div>
 <map name="ainclude_2hal__tim_8hdep" id="ainclude_2hal__tim_8hdep">
-<area shape="rect" title="Basic timer initialization interface for STM32F411RE." alt="" coords="173,5,308,31"/>
+<area shape="rect" title="Header for timer configuration functions (basic timer and PWM setup). *." alt="" coords="173,5,308,31"/>
 <area shape="rect" href="hal__rcc_8h.html" title="Clock control utility functions for enabling STM32F4 peripherals." alt="" coords="125,79,255,104"/>
 <area shape="poly" title=" " alt="" coords="226,44,200,80,196,77,222,41"/>
 <area shape="rect" href="hal__types_8h.html" title="Core HAL type definitions and centralized module includes for STM32F411RE." alt="" coords="5,152,153,177"/>
 <area shape="poly" title=" " alt="" coords="184,38,147,55,115,81,102,98,93,117,84,152,79,151,88,115,98,95,111,77,144,51,182,33"/>
 <area shape="rect" href="hal__rcc_8c.html" title="RCC peripheral clock enable implementation for STM32F4 series." alt="" coords="177,152,280,177"/>
 <area shape="poly" title=" " alt="" coords="258,41,270,71,272,88,270,105,257,132,241,153,237,150,253,129,265,103,267,88,265,72,253,43"/>
-<area shape="rect" href="hal__tim_8c.html" title="Timer initialization for 1 Hz timebase using STM32F411RE general&#45;purpose timers." alt="" coords="304,152,409,177"/>
+<area shape="rect" href="hal__tim_8c.html" title="Timer driver for STM32F446RE (PWM and basic timer functions)." alt="" coords="304,152,409,177"/>
 <area shape="poly" title=" " alt="" coords="261,40,349,150,345,153,257,43"/>
 <area shape="poly" title=" " alt="" coords="162,114,99,154,96,150,159,109"/>
 <area shape="poly" title=" " alt="" coords="205,115,225,151,220,153,201,118"/>
@@ -120,66 +120,124 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a49ad05cc6dff6fada2b6e489c9fa03f4" id="r_a49ad05cc6dff6fada2b6e489c9fa03f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="hal__tim_8h.html#a49ad05cc6dff6fada2b6e489c9fa03f4">tim_1hz_init</a> (<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *timx, uint32_t clk_hz)</td></tr>
-<tr class="memdesc:a49ad05cc6dff6fada2b6e489c9fa03f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the specified timer to generate a 1 Hz timebase.  <br /></td></tr>
-<tr class="separator:a49ad05cc6dff6fada2b6e489c9fa03f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga49ad05cc6dff6fada2b6e489c9fa03f4" id="r_ga49ad05cc6dff6fada2b6e489c9fa03f4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__HAL__TIM__Functions.html#ga49ad05cc6dff6fada2b6e489c9fa03f4">tim_1hz_init</a> (<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *timx, uint32_t clk_hz)</td></tr>
+<tr class="memdesc:ga49ad05cc6dff6fada2b6e489c9fa03f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the specified timer to generate a 1 Hz overflow.  <br /></td></tr>
+<tr class="separator:ga49ad05cc6dff6fada2b6e489c9fa03f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacc8258753267f07e8764d87dee7fd753" id="r_gacc8258753267f07e8764d87dee7fd753"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__HAL__TIM__Functions.html#gacc8258753267f07e8764d87dee7fd753">tim_pwm_init</a> (<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *timx, uint16_t prescaler, uint16_t arr)</td></tr>
+<tr class="memdesc:gacc8258753267f07e8764d87dee7fd753"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a timer for PWM output.  <br /></td></tr>
+<tr class="separator:gacc8258753267f07e8764d87dee7fd753"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5f6414204eaa9c35c9138eba8b628d69" id="r_ga5f6414204eaa9c35c9138eba8b628d69"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__HAL__TIM__Functions.html#ga5f6414204eaa9c35c9138eba8b628d69">tim_pwm_config_channel</a> (<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *timx, uint8_t channel, uint16_t duty)</td></tr>
+<tr class="memdesc:ga5f6414204eaa9c35c9138eba8b628d69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configures a specific channel of the timer for PWM output.  <br /></td></tr>
+<tr class="separator:ga5f6414204eaa9c35c9138eba8b628d69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad1388d8ba166aa2d1f901889b6f74357" id="r_gad1388d8ba166aa2d1f901889b6f74357"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__HAL__TIM__Functions.html#gad1388d8ba166aa2d1f901889b6f74357">tim_pwm_start</a> (<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *timx)</td></tr>
+<tr class="memdesc:gad1388d8ba166aa2d1f901889b6f74357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts the timer counter (CEN = 1).  <br /></td></tr>
+<tr class="separator:gad1388d8ba166aa2d1f901889b6f74357"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Basic timer initialization interface for STM32F411RE. </p>
-<p>This header exposes a helper function for initializing general-purpose timers to generate a 1 Hz timebase using prescaler and auto-reload configuration. </p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="a49ad05cc6dff6fada2b6e489c9fa03f4" name="a49ad05cc6dff6fada2b6e489c9fa03f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49ad05cc6dff6fada2b6e489c9fa03f4">&#9670;&#160;</a></span>tim_1hz_init()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void tim_1hz_init </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *&#160;</td>
-          <td class="paramname"><em>timx</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>clk_hz</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initializes the specified timer to generate a 1 Hz timebase. </p>
-<p>Configures the timer's prescaler and auto-reload register (ARR) so that it overflows every 1 second. This can be used for timekeeping, simple blinking, or periodic polling loops.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">timx</td><td>Pointer to the timer peripheral (e.g., <code>TIM2</code>, <code>TIM3</code>, etc.) </td></tr>
-    <tr><td class="paramname">clk_hz</td><td>Input clock frequency in Hz (usually equal to APB1/APB2 timer clock)</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>This function only sets up the timer for basic up-counting operation. It does not enable interrupts or configure any output channels.</dd></dl>
-<p>Initializes the specified timer to generate a 1 Hz timebase.</p>
-<p>This function calculates a prescaler and auto-reload value so that the timer overflows every 1 second. It assumes the timer is driven by <code>clk_hz</code>, which should be the correct APB1 or APB2 timer clock depending on the TIM peripheral.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">timx</td><td>Pointer to the timer peripheral (e.g., <code>TIM2</code>, <code>TIM3</code>, etc.) </td></tr>
-    <tr><td class="paramname">clk_hz</td><td>The timer input clock frequency in Hz.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section note"><dt>Note</dt><dd>This function enables the timer but does not enable interrupts. You must call <code><a class="el" href="hal__rcc_8h.html#a13229e5fabc6d4b1de1f53946555750d" title="Enables the peripheral clock for a specific TIM instance.">rcc_enable_tim()</a></code> beforehand to ensure the clock is active. </dd></dl>
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2fatal_2Career_Projects_2Hal_Library_2core_2main_8c-example.html#a22">/home/fatal/Career_Projects/Hal_Library/core/main.c</a>.</dd>
-</dl>
-
-</div>
-</div>
-</div><!-- contents -->
+<div class="textblock"><p>Header for timer configuration functions (basic timer and PWM setup). *. </p>
+<p>Timer HAL interface for STM32F446RE (basic and PWM modes).</p>
+<ul>
+<li>* This module provides APIs to configure STM32F4 timers for:</li>
+<li>- 1Hz timebase (for polling or blinking)</li>
+<li>- PWM output (for servo motors, LEDs, etc.)</li>
+<li></li>
+<li><dl class="section author"><dt>Author</dt><dd>Steven Reynoso</dd></dl>
+</li>
+<li></li>
+<li></li>
+</ul>
+<h1><a class="anchor" id="example_usage"></a>
+Example: Using TIM2 with SPI and USART</h1>
+<ul>
+<li></li>
+<li><div class="fragment"><div class="line">* <span class="keywordtype">int</span> <a class="code hl_function" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line">*     <a class="code hl_struct" href="structgpio__config__t.html">gpio_config_t</a> uart_cfg = {</div>
+<div class="line">*         .<a class="code hl_variable" href="structgpio__config__t.html#a5871cbb2be3825fc029ba2d87a061dd4">pin</a> = <a class="code hl_define" href="stm32f4__gpio_8h.html#a152d375e59cbe77fd4b686fef2613abf">PIN</a>(<span class="charliteral">&#39;A&#39;</span>, 2),                   <span class="comment">// USART2_TX</span></div>
+<div class="line">*         .mode = <a class="code hl_enumvalue" href="stm32f4__gpio_8h.html#a491a2cbfb4e94f2afcc0d5bdef2dc454a9024199e895349a1913f8565bcb9812e">GPIO_MODE_ALTFUNC</a>,</div>
+<div class="line">*         .otype = <a class="code hl_enumvalue" href="stm32f4__gpio_8h.html#ab1ee03ce945cfd38e94d5f5ef4b5c1ada35d219a1b7c6a208362d28f1981fd6d1">GPIO_OTYPE_PUSHPULL</a>,</div>
+<div class="line">*         .speed = <a class="code hl_enumvalue" href="stm32f4__gpio_8h.html#ad75efa98e526363b9f9325f7acd32d79adf918cc24366489024232239a491da12">GPIO_SPEED_HIGH</a>,</div>
+<div class="line">*         .pull = <a class="code hl_enumvalue" href="stm32f4__gpio_8h.html#a740b89bbf02acb8744bd765c236bd2c6aa528b4821b033fe90e0b186ada74fa10">GPIO_NO_PULL</a></div>
+<div class="line">*     };</div>
+<div class="line">*</div>
+<div class="line">*     <a class="code hl_struct" href="structgpio__config__t.html">gpio_config_t</a> spi_sck =  { .<a class="code hl_variable" href="structgpio__config__t.html#a5871cbb2be3825fc029ba2d87a061dd4">pin</a> = <a class="code hl_define" href="stm32f4__gpio_8h.html#a152d375e59cbe77fd4b686fef2613abf">PIN</a>(<span class="charliteral">&#39;A&#39;</span>, 5), ... };</div>
+<div class="line">*     <a class="code hl_struct" href="structgpio__config__t.html">gpio_config_t</a> spi_miso = { .<a class="code hl_variable" href="structgpio__config__t.html#a5871cbb2be3825fc029ba2d87a061dd4">pin</a> = <a class="code hl_define" href="stm32f4__gpio_8h.html#a152d375e59cbe77fd4b686fef2613abf">PIN</a>(<span class="charliteral">&#39;A&#39;</span>, 6), ... };</div>
+<div class="line">*     <a class="code hl_struct" href="structgpio__config__t.html">gpio_config_t</a> spi_mosi = { .<a class="code hl_variable" href="structgpio__config__t.html#a5871cbb2be3825fc029ba2d87a061dd4">pin</a> = <a class="code hl_define" href="stm32f4__gpio_8h.html#a152d375e59cbe77fd4b686fef2613abf">PIN</a>(<span class="charliteral">&#39;A&#39;</span>, 7), ... };</div>
+<div class="line">*</div>
+<div class="line">*     <a class="code hl_function" href="hal__rcc_8h.html#a685564a7d6ae6ff2fc57a76626b98923">rcc_enable_gpio</a>(<a class="code hl_define" href="stm32f4__gpio_8h.html#ac2ee3f6c53cf7308c4ca79c6f7e5e678">GET_PORT</a>(uart_cfg.<a class="code hl_variable" href="structgpio__config__t.html#a5871cbb2be3825fc029ba2d87a061dd4">pin</a>));</div>
+<div class="line">*     <a class="code hl_function" href="hal__rcc_8h.html#ae59e3ccbca78c99ed97f012bb427d64e">rcc_enable_uart</a>(<a class="code hl_define" href="stm32f4__uart_8h.html#af114a9eab03ca08a6fb720e511595930">USART2</a>);</div>
+<div class="line">*     <a class="code hl_function" href="hal__rcc_8h.html#a36ab789e2640ed04db80b50755ab0b8a">rcc_enable_spi</a>(<a class="code hl_define" href="stm32f4__spi_8h.html#ad483be344a28ac800be8f03654a9612f">SPI1</a>);</div>
+<div class="line">*     <a class="code hl_function" href="hal__rcc_8h.html#a13229e5fabc6d4b1de1f53946555750d">rcc_enable_tim</a>(<a class="code hl_define" href="group__TIM__BaseAddresses.html#ga3cfac9f2e43673f790f8668d48b4b92b">TIM2</a>);</div>
+<div class="line">*</div>
+<div class="line">*     <a class="code hl_function" href="hal__systick_8h.html#a11247369a195b7712581b84070c8b304">systick_init</a>(16000);</div>
+<div class="line">*     <a class="code hl_function" href="hal__gpio_8h.html#a0a0b20bdeea7390769982ca770169298">gpio_init</a>(uart_cfg);</div>
+<div class="line">*     <a class="code hl_function" href="hal__gpio_8h.html#a0a0b20bdeea7390769982ca770169298">gpio_init</a>(spi_sck);</div>
+<div class="line">*     <a class="code hl_function" href="hal__gpio_8h.html#a0a0b20bdeea7390769982ca770169298">gpio_init</a>(spi_miso);</div>
+<div class="line">*     <a class="code hl_function" href="hal__gpio_8h.html#a0a0b20bdeea7390769982ca770169298">gpio_init</a>(spi_mosi);</div>
+<div class="line">*</div>
+<div class="line">*     <a class="code hl_function" href="hal__gpio_8h.html#a406fcad4cee04323432f8ce31cdcd311">gpio_set_af</a>(uart_cfg.<a class="code hl_variable" href="structgpio__config__t.html#a5871cbb2be3825fc029ba2d87a061dd4">pin</a>, 7);     <span class="comment">// USART2_TX</span></div>
+<div class="line">*     <a class="code hl_function" href="hal__gpio_8h.html#a406fcad4cee04323432f8ce31cdcd311">gpio_set_af</a>(spi_sck.<a class="code hl_variable" href="structgpio__config__t.html#a5871cbb2be3825fc029ba2d87a061dd4">pin</a>, 5);      <span class="comment">// SPI1_SCK</span></div>
+<div class="line">*     <a class="code hl_function" href="hal__gpio_8h.html#a406fcad4cee04323432f8ce31cdcd311">gpio_set_af</a>(spi_miso.<a class="code hl_variable" href="structgpio__config__t.html#a5871cbb2be3825fc029ba2d87a061dd4">pin</a>, 5);     <span class="comment">// SPI1_MISO</span></div>
+<div class="line">*     <a class="code hl_function" href="hal__gpio_8h.html#a406fcad4cee04323432f8ce31cdcd311">gpio_set_af</a>(spi_mosi.<a class="code hl_variable" href="structgpio__config__t.html#a5871cbb2be3825fc029ba2d87a061dd4">pin</a>, 5);     <span class="comment">// SPI1_MOSI</span></div>
+<div class="line">*</div>
+<div class="line">*     <a class="code hl_function" href="hal__uart_8h.html#a2dc25d9f7d00cd31e61b4180cebc3319">uart_init</a>(<a class="code hl_define" href="stm32f4__uart_8h.html#af114a9eab03ca08a6fb720e511595930">USART2</a>, 16000000, <a class="code hl_enumvalue" href="stm32f4__uart_8h.html#aba14184fef722499ec8d81d880851c4aa632ed7adf2cc67d3b11bb8027055b556">UART_BAUD_115200</a>);</div>
+<div class="line">*     <a class="code hl_function" href="hal__spi_8h.html#a7ed2a8db571b419c978424e50882f935">spi_init</a>(<a class="code hl_define" href="stm32f4__spi_8h.html#ad483be344a28ac800be8f03654a9612f">SPI1</a>);</div>
+<div class="line">*     <a class="code hl_function" href="group__HAL__TIM__Functions.html#ga49ad05cc6dff6fada2b6e489c9fa03f4">tim_1hz_init</a>(<a class="code hl_define" href="group__TIM__BaseAddresses.html#ga3cfac9f2e43673f790f8668d48b4b92b">TIM2</a>, 16000000);     <span class="comment">// Overflow every 1 sec</span></div>
+<div class="line">*</div>
+<div class="line">*     uint8_t tx = 0xAB;</div>
+<div class="line">*</div>
+<div class="line">*     <span class="keywordflow">while</span> (1) {</div>
+<div class="line">*         <span class="keywordflow">if</span> (<a class="code hl_define" href="group__TIM__BaseAddresses.html#ga3cfac9f2e43673f790f8668d48b4b92b">TIM2</a>-&gt;SR &amp; (1 &lt;&lt; 0)) {    <span class="comment">// Update interrupt flag</span></div>
+<div class="line">*             <a class="code hl_define" href="group__TIM__BaseAddresses.html#ga3cfac9f2e43673f790f8668d48b4b92b">TIM2</a>-&gt;SR &amp;= ~(1 &lt;&lt; 0);    <span class="comment">// Clear flag</span></div>
+<div class="line">*</div>
+<div class="line">*             <a class="code hl_function" href="hal__uart_8h.html#afff53b0e76567e0823b6afd700cdb0bb">uart_print</a>(<a class="code hl_define" href="stm32f4__uart_8h.html#af114a9eab03ca08a6fb720e511595930">USART2</a>, <span class="stringliteral">&quot;TIM2 Fired\r\n&quot;</span>);</div>
+<div class="line">*             uint8_t rx = <a class="code hl_function" href="hal__spi_8h.html#acf83573e815134513f0f8c30aab7f865">spi_transfer</a>(<a class="code hl_define" href="stm32f4__spi_8h.html#ad483be344a28ac800be8f03654a9612f">SPI1</a>, tx);</div>
+<div class="line">*</div>
+<div class="line">*             <span class="keywordflow">if</span> (rx == tx) {</div>
+<div class="line">*                 <a class="code hl_function" href="hal__uart_8h.html#afff53b0e76567e0823b6afd700cdb0bb">uart_print</a>(<a class="code hl_define" href="stm32f4__uart_8h.html#af114a9eab03ca08a6fb720e511595930">USART2</a>, <span class="stringliteral">&quot;SPI Loopback SUCCESS!\r\n&quot;</span>);</div>
+<div class="line">*             } <span class="keywordflow">else</span> {</div>
+<div class="line">*                 <a class="code hl_function" href="hal__uart_8h.html#afff53b0e76567e0823b6afd700cdb0bb">uart_print</a>(<a class="code hl_define" href="stm32f4__uart_8h.html#af114a9eab03ca08a6fb720e511595930">USART2</a>, <span class="stringliteral">&quot;SPI FAIL\r\n&quot;</span>);</div>
+<div class="line">*             }</div>
+<div class="line">*         }</div>
+<div class="line">*     }</div>
+<div class="line">* }</div>
+<div class="line">* </div>
+<div class="ttc" id="agroup__HAL__TIM__Functions_html_ga49ad05cc6dff6fada2b6e489c9fa03f4"><div class="ttname"><a href="group__HAL__TIM__Functions.html#ga49ad05cc6dff6fada2b6e489c9fa03f4">tim_1hz_init</a></div><div class="ttdeci">void tim_1hz_init(TIM_TypeDef *timx, uint32_t clk_hz)</div><div class="ttdoc">Initializes the specified timer to generate a 1 Hz overflow.</div><div class="ttdef"><b>Definition</b> hal_tim.c:36</div></div>
+<div class="ttc" id="agroup__TIM__BaseAddresses_html_ga3cfac9f2e43673f790f8668d48b4b92b"><div class="ttname"><a href="group__TIM__BaseAddresses.html#ga3cfac9f2e43673f790f8668d48b4b92b">TIM2</a></div><div class="ttdeci">#define TIM2</div><div class="ttdef"><b>Definition</b> stm32f4_tim.h:35</div></div>
+<div class="ttc" id="ahal__gpio_8h_html_a0a0b20bdeea7390769982ca770169298"><div class="ttname"><a href="hal__gpio_8h.html#a0a0b20bdeea7390769982ca770169298">gpio_init</a></div><div class="ttdeci">void gpio_init(gpio_config_t cfg)</div><div class="ttdoc">Initialize a GPIO pin with a specified configuration.</div><div class="ttdef"><b>Definition</b> hal_gpio.c:39</div></div>
+<div class="ttc" id="ahal__gpio_8h_html_a406fcad4cee04323432f8ce31cdcd311"><div class="ttname"><a href="hal__gpio_8h.html#a406fcad4cee04323432f8ce31cdcd311">gpio_set_af</a></div><div class="ttdeci">void gpio_set_af(uint16_t pin, uint8_t af)</div><div class="ttdoc">Configure the alternate function for a GPIO pin.</div><div class="ttdef"><b>Definition</b> hal_gpio.c:65</div></div>
+<div class="ttc" id="ahal__rcc_8h_html_a13229e5fabc6d4b1de1f53946555750d"><div class="ttname"><a href="hal__rcc_8h.html#a13229e5fabc6d4b1de1f53946555750d">rcc_enable_tim</a></div><div class="ttdeci">void rcc_enable_tim(TIM_TypeDef *timx)</div><div class="ttdoc">Enables the peripheral clock for a specific TIM instance.</div><div class="ttdef"><b>Definition</b> hal_rcc.c:61</div></div>
+<div class="ttc" id="ahal__rcc_8h_html_a36ab789e2640ed04db80b50755ab0b8a"><div class="ttname"><a href="hal__rcc_8h.html#a36ab789e2640ed04db80b50755ab0b8a">rcc_enable_spi</a></div><div class="ttdeci">void rcc_enable_spi(SPI_TypeDef *spix)</div><div class="ttdoc">Enables the peripheral clock for an SPI peripheral.</div><div class="ttdef"><b>Definition</b> hal_rcc.c:83</div></div>
+<div class="ttc" id="ahal__rcc_8h_html_a685564a7d6ae6ff2fc57a76626b98923"><div class="ttname"><a href="hal__rcc_8h.html#a685564a7d6ae6ff2fc57a76626b98923">rcc_enable_gpio</a></div><div class="ttdeci">void rcc_enable_gpio(uint16_t port_index)</div><div class="ttdoc">Enables the peripheral clock for a GPIO port.</div><div class="ttdef"><b>Definition</b> hal_rcc.c:21</div></div>
+<div class="ttc" id="ahal__rcc_8h_html_ae59e3ccbca78c99ed97f012bb427d64e"><div class="ttname"><a href="hal__rcc_8h.html#ae59e3ccbca78c99ed97f012bb427d64e">rcc_enable_uart</a></div><div class="ttdeci">void rcc_enable_uart(UART_TypeDef *uart)</div><div class="ttdoc">Enables the peripheral clock for a UART/USART peripheral.</div><div class="ttdef"><b>Definition</b> hal_rcc.c:44</div></div>
+<div class="ttc" id="ahal__spi_8h_html_a7ed2a8db571b419c978424e50882f935"><div class="ttname"><a href="hal__spi_8h.html#a7ed2a8db571b419c978424e50882f935">spi_init</a></div><div class="ttdeci">void spi_init(SPI_TypeDef *spix)</div><div class="ttdoc">Initializes the given SPI peripheral in master mode.</div><div class="ttdef"><b>Definition</b> hal_spi.c:55</div></div>
+<div class="ttc" id="ahal__spi_8h_html_acf83573e815134513f0f8c30aab7f865"><div class="ttname"><a href="hal__spi_8h.html#acf83573e815134513f0f8c30aab7f865">spi_transfer</a></div><div class="ttdeci">uint8_t spi_transfer(SPI_TypeDef *spix, uint8_t data)</div><div class="ttdoc">Sends and receives one byte over SPI.</div><div class="ttdef"><b>Definition</b> hal_spi.c:25</div></div>
+<div class="ttc" id="ahal__systick_8h_html_a11247369a195b7712581b84070c8b304"><div class="ttname"><a href="hal__systick_8h.html#a11247369a195b7712581b84070c8b304">systick_init</a></div><div class="ttdeci">void systick_init(uint32_t ticks)</div><div class="ttdoc">Initializes the SysTick timer with a specific tick interval.</div><div class="ttdef"><b>Definition</b> hal_systick.c:25</div></div>
+<div class="ttc" id="ahal__uart_8h_html_a2dc25d9f7d00cd31e61b4180cebc3319"><div class="ttname"><a href="hal__uart_8h.html#a2dc25d9f7d00cd31e61b4180cebc3319">uart_init</a></div><div class="ttdeci">void uart_init(UART_TypeDef *uart, uint32_t periph_clk, baud_rate_t baud)</div><div class="ttdoc">Initializes the UART peripheral with the given baud rate.</div><div class="ttdef"><b>Definition</b> hal_uart.c:87</div></div>
+<div class="ttc" id="ahal__uart_8h_html_afff53b0e76567e0823b6afd700cdb0bb"><div class="ttname"><a href="hal__uart_8h.html#afff53b0e76567e0823b6afd700cdb0bb">uart_print</a></div><div class="ttdeci">void uart_print(UART_TypeDef *uart, const char *msg)</div><div class="ttdoc">Sends a null-terminated string over UART (blocking).</div><div class="ttdef"><b>Definition</b> hal_uart.c:69</div></div>
+<div class="ttc" id="amain_8c_html_a840291bc02cba5474a4cb46a9b9566fe"><div class="ttname"><a href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main</a></div><div class="ttdeci">int main(void)</div><div class="ttdef"><b>Definition</b> main.c:29</div></div>
+<div class="ttc" id="astm32f4__gpio_8h_html_a152d375e59cbe77fd4b686fef2613abf"><div class="ttname"><a href="stm32f4__gpio_8h.html#a152d375e59cbe77fd4b686fef2613abf">PIN</a></div><div class="ttdeci">#define PIN(port, pin)</div><div class="ttdoc">Helper macro to pack a GPIO port and pin number into a single value.</div><div class="ttdef"><b>Definition</b> stm32f4_gpio.h:38</div></div>
+<div class="ttc" id="astm32f4__gpio_8h_html_a491a2cbfb4e94f2afcc0d5bdef2dc454a9024199e895349a1913f8565bcb9812e"><div class="ttname"><a href="stm32f4__gpio_8h.html#a491a2cbfb4e94f2afcc0d5bdef2dc454a9024199e895349a1913f8565bcb9812e">GPIO_MODE_ALTFUNC</a></div><div class="ttdeci">@ GPIO_MODE_ALTFUNC</div><div class="ttdef"><b>Definition</b> stm32f4_gpio.h:78</div></div>
+<div class="ttc" id="astm32f4__gpio_8h_html_a740b89bbf02acb8744bd765c236bd2c6aa528b4821b033fe90e0b186ada74fa10"><div class="ttname"><a href="stm32f4__gpio_8h.html#a740b89bbf02acb8744bd765c236bd2c6aa528b4821b033fe90e0b186ada74fa10">GPIO_NO_PULL</a></div><div class="ttdeci">@ GPIO_NO_PULL</div><div class="ttdef"><b>Definition</b> stm32f4_gpio.h:104</div></div>
+<div class="ttc" id="astm32f4__gpio_8h_html_ab1ee03ce945cfd38e94d5f5ef4b5c1ada35d219a1b7c6a208362d28f1981fd6d1"><div class="ttname"><a href="stm32f4__gpio_8h.html#ab1ee03ce945cfd38e94d5f5ef4b5c1ada35d219a1b7c6a208362d28f1981fd6d1">GPIO_OTYPE_PUSHPULL</a></div><div class="ttdeci">@ GPIO_OTYPE_PUSHPULL</div><div class="ttdef"><b>Definition</b> stm32f4_gpio.h:86</div></div>
+<div class="ttc" id="astm32f4__gpio_8h_html_ac2ee3f6c53cf7308c4ca79c6f7e5e678"><div class="ttname"><a href="stm32f4__gpio_8h.html#ac2ee3f6c53cf7308c4ca79c6f7e5e678">GET_PORT</a></div><div class="ttdeci">#define GET_PORT(p)</div><div class="ttdoc">Extract GPIO port index from packed pin.</div><div class="ttdef"><b>Definition</b> stm32f4_gpio.h:46</div></div>
+<div class="ttc" id="astm32f4__gpio_8h_html_ad75efa98e526363b9f9325f7acd32d79adf918cc24366489024232239a491da12"><div class="ttname"><a href="stm32f4__gpio_8h.html#ad75efa98e526363b9f9325f7acd32d79adf918cc24366489024232239a491da12">GPIO_SPEED_HIGH</a></div><div class="ttdeci">@ GPIO_SPEED_HIGH</div><div class="ttdef"><b>Definition</b> stm32f4_gpio.h:97</div></div>
+<div class="ttc" id="astm32f4__spi_8h_html_ad483be344a28ac800be8f03654a9612f"><div class="ttname"><a href="stm32f4__spi_8h.html#ad483be344a28ac800be8f03654a9612f">SPI1</a></div><div class="ttdeci">#define SPI1</div><div class="ttdef"><b>Definition</b> stm32f4_spi.h:20</div></div>
+<div class="ttc" id="astm32f4__uart_8h_html_aba14184fef722499ec8d81d880851c4aa632ed7adf2cc67d3b11bb8027055b556"><div class="ttname"><a href="stm32f4__uart_8h.html#aba14184fef722499ec8d81d880851c4aa632ed7adf2cc67d3b11bb8027055b556">UART_BAUD_115200</a></div><div class="ttdeci">@ UART_BAUD_115200</div><div class="ttdef"><b>Definition</b> stm32f4_uart.h:75</div></div>
+<div class="ttc" id="astm32f4__uart_8h_html_af114a9eab03ca08a6fb720e511595930"><div class="ttname"><a href="stm32f4__uart_8h.html#af114a9eab03ca08a6fb720e511595930">USART2</a></div><div class="ttdeci">#define USART2</div><div class="ttdef"><b>Definition</b> stm32f4_uart.h:21</div></div>
+<div class="ttc" id="astructgpio__config__t_html"><div class="ttname"><a href="structgpio__config__t.html">gpio_config_t</a></div><div class="ttdoc">GPIO configuration structure used in gpio_init().</div><div class="ttdef"><b>Definition</b> stm32f4_gpio.h:112</div></div>
+<div class="ttc" id="astructgpio__config__t_html_a5871cbb2be3825fc029ba2d87a061dd4"><div class="ttname"><a href="structgpio__config__t.html#a5871cbb2be3825fc029ba2d87a061dd4">gpio_config_t::pin</a></div><div class="ttdeci">uint16_t pin</div><div class="ttdef"><b>Definition</b> stm32f4_gpio.h:113</div></div>
+</div><!-- fragment --></li>
+<li></li>
+<li>This shows how to:</li>
+<li>- Set up USART2 on PA2</li>
+<li>- Set up SPI1 (PA5/6/7) for loopback test</li>
+<li>- Use TIM2 to create a polling interval (1Hz)</li>
+<li>- Do SPI transfer every second, and print over UART */</li>
+</ul>
+<p>Provides initialization and configuration functions for STM32 timers, including basic up-counting timers (e.g., 1 Hz timebase) and PWM output using general-purpose or advanced-control TIMx peripherals.</p>
+<dl class="section note"><dt>Note</dt><dd>Designed for register-level programming without CMSIS or STM HAL. </dd></dl>
+<dl class="section author"><dt>Author</dt><dd>Steven Reynoso </dd></dl>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8

@@ -80,7 +80,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>STM32F446RE Timer peripheral base addresses and register map.  
+<p>Register map and base addresses for STM32F446RE TIM peripherals.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;stdint.h&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -88,7 +88,7 @@ Include dependency graph for stm32f4_tim.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="stm32f4__tim_8h__incl.png" border="0" usemap="#ainclude_2registers_2stm32f4__tim_8h" alt=""/></div>
 <map name="ainclude_2registers_2stm32f4__tim_8h" id="ainclude_2registers_2stm32f4__tim_8h">
-<area shape="rect" title="STM32F446RE Timer peripheral base addresses and register map." alt="" coords="5,5,193,45"/>
+<area shape="rect" title="Register map and base addresses for STM32F446RE TIM peripherals." alt="" coords="5,5,193,45"/>
 <area shape="rect" title=" " alt="" coords="64,93,135,119"/>
 <area shape="poly" title=" " alt="" coords="102,46,102,79,97,79,97,46"/>
 </map>
@@ -98,8 +98,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
 <div class="center"><img src="stm32f4__tim_8h__dep__incl.png" border="0" usemap="#ainclude_2registers_2stm32f4__tim_8hdep" alt=""/></div>
 <map name="ainclude_2registers_2stm32f4__tim_8hdep" id="ainclude_2registers_2stm32f4__tim_8hdep">
-<area shape="rect" title="STM32F446RE Timer peripheral base addresses and register map." alt="" coords="147,5,335,45"/>
-<area shape="rect" href="hal__tim_8h.html" title="Basic timer initialization interface for STM32F411RE." alt="" coords="173,93,308,119"/>
+<area shape="rect" title="Register map and base addresses for STM32F446RE TIM peripherals." alt="" coords="147,5,335,45"/>
+<area shape="rect" href="hal__tim_8h.html" title="Header for timer configuration functions (basic timer and PWM setup). *." alt="" coords="173,93,308,119"/>
 <area shape="poly" title=" " alt="" coords="243,59,243,93,238,93,238,59"/>
 <area shape="rect" href="hal__rcc_8h.html" title="Clock control utility functions for enabling STM32F4 peripherals." alt="" coords="125,167,255,192"/>
 <area shape="poly" title=" " alt="" coords="226,132,200,168,196,165,222,129"/>
@@ -107,7 +107,7 @@ This graph shows which files directly or indirectly include this file:</div>
 <area shape="poly" title=" " alt="" coords="184,126,147,143,115,169,102,186,93,205,84,240,79,239,88,203,98,183,111,165,144,139,182,121"/>
 <area shape="rect" href="hal__rcc_8c.html" title="RCC peripheral clock enable implementation for STM32F4 series." alt="" coords="177,240,280,265"/>
 <area shape="poly" title=" " alt="" coords="258,129,270,159,272,176,270,193,257,220,241,241,237,238,253,217,265,191,267,176,265,160,253,131"/>
-<area shape="rect" href="hal__tim_8c.html" title="Timer initialization for 1 Hz timebase using STM32F411RE general&#45;purpose timers." alt="" coords="304,240,409,265"/>
+<area shape="rect" href="hal__tim_8c.html" title="Timer driver for STM32F446RE (PWM and basic timer functions)." alt="" coords="304,240,409,265"/>
 <area shape="poly" title=" " alt="" coords="261,128,349,238,345,241,257,131"/>
 <area shape="poly" title=" " alt="" coords="162,202,99,242,96,238,159,197"/>
 <area shape="poly" title=" " alt="" coords="205,203,225,239,220,241,201,206"/>
@@ -120,250 +120,70 @@ This graph shows which files directly or indirectly include this file:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register map for STM32F4 TIMx peripheral.  <a href="structTIM__TypeDef.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">TIMx register map structure.  <a href="structTIM__TypeDef.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:a2e87451fea8dc9380056d3cfc5ed81fb" id="r_a2e87451fea8dc9380056d3cfc5ed81fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4__tim_8h.html#a2e87451fea8dc9380056d3cfc5ed81fb">TIM1</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40010000UL)</td></tr>
-<tr class="separator:a2e87451fea8dc9380056d3cfc5ed81fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9a3660400b17735e91331f256095810e" id="r_a9a3660400b17735e91331f256095810e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4__tim_8h.html#a9a3660400b17735e91331f256095810e">TIM8</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40010400UL)</td></tr>
-<tr class="separator:a9a3660400b17735e91331f256095810e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af52b4b4c36110a0addfa98059f54a50e" id="r_af52b4b4c36110a0addfa98059f54a50e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4__tim_8h.html#af52b4b4c36110a0addfa98059f54a50e">TIM9</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40014000UL)</td></tr>
-<tr class="separator:af52b4b4c36110a0addfa98059f54a50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46b2ad3f5f506f0f8df0d2ec3e767267" id="r_a46b2ad3f5f506f0f8df0d2ec3e767267"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4__tim_8h.html#a46b2ad3f5f506f0f8df0d2ec3e767267">TIM10</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40014400UL)</td></tr>
-<tr class="separator:a46b2ad3f5f506f0f8df0d2ec3e767267"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfd11ef966c7165f57e2cebe0abc71ad" id="r_acfd11ef966c7165f57e2cebe0abc71ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4__tim_8h.html#acfd11ef966c7165f57e2cebe0abc71ad">TIM11</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40014800UL)</td></tr>
-<tr class="separator:acfd11ef966c7165f57e2cebe0abc71ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cfac9f2e43673f790f8668d48b4b92b" id="r_a3cfac9f2e43673f790f8668d48b4b92b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4__tim_8h.html#a3cfac9f2e43673f790f8668d48b4b92b">TIM2</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40000000UL)</td></tr>
-<tr class="separator:a3cfac9f2e43673f790f8668d48b4b92b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61ee4c391385607d7af432b63905fcc9" id="r_a61ee4c391385607d7af432b63905fcc9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4__tim_8h.html#a61ee4c391385607d7af432b63905fcc9">TIM3</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40000400UL)</td></tr>
-<tr class="separator:a61ee4c391385607d7af432b63905fcc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91a09bad8bdc7a1cb3d85cf49c94c8ec" id="r_a91a09bad8bdc7a1cb3d85cf49c94c8ec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4__tim_8h.html#a91a09bad8bdc7a1cb3d85cf49c94c8ec">TIM4</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40000800UL)</td></tr>
-<tr class="separator:a91a09bad8bdc7a1cb3d85cf49c94c8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5125ff6a23a2ed66e2e19bd196128c14" id="r_a5125ff6a23a2ed66e2e19bd196128c14"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4__tim_8h.html#a5125ff6a23a2ed66e2e19bd196128c14">TIM5</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40000C00UL)</td></tr>
-<tr class="separator:a5125ff6a23a2ed66e2e19bd196128c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7b4ed55f9201b498b38c962cca97314" id="r_ac7b4ed55f9201b498b38c962cca97314"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4__tim_8h.html#ac7b4ed55f9201b498b38c962cca97314">TIM6</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40001000UL)</td></tr>
-<tr class="separator:ac7b4ed55f9201b498b38c962cca97314"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a49267c49946fd61db6af8b49bcf16394" id="r_a49267c49946fd61db6af8b49bcf16394"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4__tim_8h.html#a49267c49946fd61db6af8b49bcf16394">TIM7</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40001400UL)</td></tr>
-<tr class="separator:a49267c49946fd61db6af8b49bcf16394"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2397f8a0f8e7aa10cf8e8c049e431e53" id="r_a2397f8a0f8e7aa10cf8e8c049e431e53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4__tim_8h.html#a2397f8a0f8e7aa10cf8e8c049e431e53">TIM12</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40001800UL)</td></tr>
-<tr class="separator:a2397f8a0f8e7aa10cf8e8c049e431e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a959a833074d59bf6cc7fb437c65b18" id="r_a5a959a833074d59bf6cc7fb437c65b18"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4__tim_8h.html#a5a959a833074d59bf6cc7fb437c65b18">TIM13</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40001C00UL)</td></tr>
-<tr class="separator:a5a959a833074d59bf6cc7fb437c65b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2dd30f46fad69dd73e1d8941a43daffe" id="r_a2dd30f46fad69dd73e1d8941a43daffe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="stm32f4__tim_8h.html#a2dd30f46fad69dd73e1d8941a43daffe">TIM14</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40002000UL)</td></tr>
-<tr class="separator:a2dd30f46fad69dd73e1d8941a43daffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2e87451fea8dc9380056d3cfc5ed81fb" id="r_ga2e87451fea8dc9380056d3cfc5ed81fb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__BaseAddresses.html#ga2e87451fea8dc9380056d3cfc5ed81fb">TIM1</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40010000UL)</td></tr>
+<tr class="separator:ga2e87451fea8dc9380056d3cfc5ed81fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9a3660400b17735e91331f256095810e" id="r_ga9a3660400b17735e91331f256095810e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__BaseAddresses.html#ga9a3660400b17735e91331f256095810e">TIM8</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40010400UL)</td></tr>
+<tr class="separator:ga9a3660400b17735e91331f256095810e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf52b4b4c36110a0addfa98059f54a50e" id="r_gaf52b4b4c36110a0addfa98059f54a50e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__BaseAddresses.html#gaf52b4b4c36110a0addfa98059f54a50e">TIM9</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40014000UL)</td></tr>
+<tr class="separator:gaf52b4b4c36110a0addfa98059f54a50e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga46b2ad3f5f506f0f8df0d2ec3e767267" id="r_ga46b2ad3f5f506f0f8df0d2ec3e767267"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__BaseAddresses.html#ga46b2ad3f5f506f0f8df0d2ec3e767267">TIM10</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40014400UL)</td></tr>
+<tr class="separator:ga46b2ad3f5f506f0f8df0d2ec3e767267"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacfd11ef966c7165f57e2cebe0abc71ad" id="r_gacfd11ef966c7165f57e2cebe0abc71ad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__BaseAddresses.html#gacfd11ef966c7165f57e2cebe0abc71ad">TIM11</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40014800UL)</td></tr>
+<tr class="separator:gacfd11ef966c7165f57e2cebe0abc71ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3cfac9f2e43673f790f8668d48b4b92b" id="r_ga3cfac9f2e43673f790f8668d48b4b92b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__BaseAddresses.html#ga3cfac9f2e43673f790f8668d48b4b92b">TIM2</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40000000UL)</td></tr>
+<tr class="separator:ga3cfac9f2e43673f790f8668d48b4b92b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga61ee4c391385607d7af432b63905fcc9" id="r_ga61ee4c391385607d7af432b63905fcc9"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__BaseAddresses.html#ga61ee4c391385607d7af432b63905fcc9">TIM3</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40000400UL)</td></tr>
+<tr class="separator:ga61ee4c391385607d7af432b63905fcc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga91a09bad8bdc7a1cb3d85cf49c94c8ec" id="r_ga91a09bad8bdc7a1cb3d85cf49c94c8ec"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__BaseAddresses.html#ga91a09bad8bdc7a1cb3d85cf49c94c8ec">TIM4</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40000800UL)</td></tr>
+<tr class="separator:ga91a09bad8bdc7a1cb3d85cf49c94c8ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5125ff6a23a2ed66e2e19bd196128c14" id="r_ga5125ff6a23a2ed66e2e19bd196128c14"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__BaseAddresses.html#ga5125ff6a23a2ed66e2e19bd196128c14">TIM5</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40000C00UL)</td></tr>
+<tr class="separator:ga5125ff6a23a2ed66e2e19bd196128c14"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac7b4ed55f9201b498b38c962cca97314" id="r_gac7b4ed55f9201b498b38c962cca97314"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__BaseAddresses.html#gac7b4ed55f9201b498b38c962cca97314">TIM6</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40001000UL)</td></tr>
+<tr class="separator:gac7b4ed55f9201b498b38c962cca97314"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga49267c49946fd61db6af8b49bcf16394" id="r_ga49267c49946fd61db6af8b49bcf16394"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__BaseAddresses.html#ga49267c49946fd61db6af8b49bcf16394">TIM7</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40001400UL)</td></tr>
+<tr class="separator:ga49267c49946fd61db6af8b49bcf16394"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2397f8a0f8e7aa10cf8e8c049e431e53" id="r_ga2397f8a0f8e7aa10cf8e8c049e431e53"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__BaseAddresses.html#ga2397f8a0f8e7aa10cf8e8c049e431e53">TIM12</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40001800UL)</td></tr>
+<tr class="separator:ga2397f8a0f8e7aa10cf8e8c049e431e53"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5a959a833074d59bf6cc7fb437c65b18" id="r_ga5a959a833074d59bf6cc7fb437c65b18"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__BaseAddresses.html#ga5a959a833074d59bf6cc7fb437c65b18">TIM13</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40001C00UL)</td></tr>
+<tr class="separator:ga5a959a833074d59bf6cc7fb437c65b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2dd30f46fad69dd73e1d8941a43daffe" id="r_ga2dd30f46fad69dd73e1d8941a43daffe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__BaseAddresses.html#ga2dd30f46fad69dd73e1d8941a43daffe">TIM14</a>&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40002000UL)</td></tr>
+<tr class="separator:ga2dd30f46fad69dd73e1d8941a43daffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga93d86355e5e3b399ed45e1ca83abed2a" id="r_ga93d86355e5e3b399ed45e1ca83abed2a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__CR__BitDefinitions.html#ga93d86355e5e3b399ed45e1ca83abed2a">TIM_CR1_CEN</a>&#160;&#160;&#160;(1U &lt;&lt; 0)</td></tr>
+<tr class="separator:ga93d86355e5e3b399ed45e1ca83abed2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4a3ad409f6b147cdcbafbfe29102f3fd" id="r_ga4a3ad409f6b147cdcbafbfe29102f3fd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__CR__BitDefinitions.html#ga4a3ad409f6b147cdcbafbfe29102f3fd">TIM_CR1_ARPE</a>&#160;&#160;&#160;(1U &lt;&lt; 7)</td></tr>
+<tr class="separator:ga4a3ad409f6b147cdcbafbfe29102f3fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga16f52a8e9aad153223405b965566ae91" id="r_ga16f52a8e9aad153223405b965566ae91"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__CR__BitDefinitions.html#ga16f52a8e9aad153223405b965566ae91">TIM_EGR_UG</a>&#160;&#160;&#160;(1U &lt;&lt; 0)</td></tr>
+<tr class="separator:ga16f52a8e9aad153223405b965566ae91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3f494b9881e7b97bb2d79f7ad4e79937" id="r_ga3f494b9881e7b97bb2d79f7ad4e79937"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__CR__BitDefinitions.html#ga3f494b9881e7b97bb2d79f7ad4e79937">TIM_CCER_CC1E</a>&#160;&#160;&#160;(1U &lt;&lt; 0)</td></tr>
+<tr class="separator:ga3f494b9881e7b97bb2d79f7ad4e79937"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga76392a4d63674cd0db0a55762458f16c" id="r_ga76392a4d63674cd0db0a55762458f16c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__CR__BitDefinitions.html#ga76392a4d63674cd0db0a55762458f16c">TIM_CCER_CC2E</a>&#160;&#160;&#160;(1U &lt;&lt; 4)</td></tr>
+<tr class="separator:ga76392a4d63674cd0db0a55762458f16c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1da114e666b61f09cf25f50cdaa7f81f" id="r_ga1da114e666b61f09cf25f50cdaa7f81f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__CR__BitDefinitions.html#ga1da114e666b61f09cf25f50cdaa7f81f">TIM_CCER_CC3E</a>&#160;&#160;&#160;(1U &lt;&lt; 8)</td></tr>
+<tr class="separator:ga1da114e666b61f09cf25f50cdaa7f81f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga940b041ab5975311f42f26d314a4b621" id="r_ga940b041ab5975311f42f26d314a4b621"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__CR__BitDefinitions.html#ga940b041ab5975311f42f26d314a4b621">TIM_CCER_CC4E</a>&#160;&#160;&#160;(1U &lt;&lt; 12)</td></tr>
+<tr class="separator:ga940b041ab5975311f42f26d314a4b621"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga428f1b4fd1affbc5c4df27a6959a327b" id="r_ga428f1b4fd1affbc5c4df27a6959a327b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__CR__BitDefinitions.html#ga428f1b4fd1affbc5c4df27a6959a327b">TIM_CCMR1_OC1M_PWM1</a>&#160;&#160;&#160;(0x6 &lt;&lt; 4)</td></tr>
+<tr class="separator:ga428f1b4fd1affbc5c4df27a6959a327b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1aa54ddf87a4b339881a8d5368ec80eb" id="r_ga1aa54ddf87a4b339881a8d5368ec80eb"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__TIM__CR__BitDefinitions.html#ga1aa54ddf87a4b339881a8d5368ec80eb">TIM_CCMR1_OC1PE</a>&#160;&#160;&#160;(1U &lt;&lt; 3)</td></tr>
+<tr class="separator:ga1aa54ddf87a4b339881a8d5368ec80eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>STM32F446RE Timer peripheral base addresses and register map. </p>
-<p>Provides base address definitions and register struct for general-purpose, advanced-control, and basic timers on STM32F446RE. Use this header to interact with TIMx peripherals directly via memory-mapped I/O.</p>
+<div class="textblock"><p>Register map and base addresses for STM32F446RE TIM peripherals. </p>
+<p>This header defines memory-mapped register structures and base addresses for general-purpose, advanced-control, and basic timers in the STM32F446RE. Use this for low-level, register-direct control of TIM peripherals.</p>
 <dl class="section note"><dt>Note</dt><dd><ul>
-<li>This struct is modeled after the most feature-complete timers (TIM1/TIM8).</li>
-<li>Not all timers implement all fields (e.g., TIM6/7 lack CCRx, BDTR, etc).</li>
-<li>Check the STM32F446RE reference manual (RM0390) before accessing advanced fields.</li>
+<li>TIM1 and TIM8 are advanced-control timers (support RCR, BDTR, etc.).</li>
+<li>TIM2–5, TIM9–14 are general-purpose timers with capture/compare.</li>
+<li>TIM6 and TIM7 are basic timers (no CCRx, BDTR, etc.).</li>
 </ul>
 </dd></dl>
+<p>Refer to RM0390 for full timer functionality and limitations per TIMx instance.</p>
 <dl class="section author"><dt>Author</dt><dd>Steven Reynoso </dd></dl>
-</div><h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a2e87451fea8dc9380056d3cfc5ed81fb" name="a2e87451fea8dc9380056d3cfc5ed81fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e87451fea8dc9380056d3cfc5ed81fb">&#9670;&#160;</a></span>TIM1</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TIM1&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40010000UL)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a46b2ad3f5f506f0f8df0d2ec3e767267" name="a46b2ad3f5f506f0f8df0d2ec3e767267"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46b2ad3f5f506f0f8df0d2ec3e767267">&#9670;&#160;</a></span>TIM10</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TIM10&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40014400UL)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="acfd11ef966c7165f57e2cebe0abc71ad" name="acfd11ef966c7165f57e2cebe0abc71ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acfd11ef966c7165f57e2cebe0abc71ad">&#9670;&#160;</a></span>TIM11</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TIM11&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40014800UL)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2397f8a0f8e7aa10cf8e8c049e431e53" name="a2397f8a0f8e7aa10cf8e8c049e431e53"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2397f8a0f8e7aa10cf8e8c049e431e53">&#9670;&#160;</a></span>TIM12</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TIM12&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40001800UL)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5a959a833074d59bf6cc7fb437c65b18" name="a5a959a833074d59bf6cc7fb437c65b18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a959a833074d59bf6cc7fb437c65b18">&#9670;&#160;</a></span>TIM13</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TIM13&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40001C00UL)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a2dd30f46fad69dd73e1d8941a43daffe" name="a2dd30f46fad69dd73e1d8941a43daffe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2dd30f46fad69dd73e1d8941a43daffe">&#9670;&#160;</a></span>TIM14</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TIM14&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40002000UL)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a3cfac9f2e43673f790f8668d48b4b92b" name="a3cfac9f2e43673f790f8668d48b4b92b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3cfac9f2e43673f790f8668d48b4b92b">&#9670;&#160;</a></span>TIM2</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TIM2&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40000000UL)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="_2home_2fatal_2Career_Projects_2Hal_Library_2core_2main_8c-example.html#a13">/home/fatal/Career_Projects/Hal_Library/core/main.c</a>.</dd>
-</dl>
-
-</div>
-</div>
-<a id="a61ee4c391385607d7af432b63905fcc9" name="a61ee4c391385607d7af432b63905fcc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a61ee4c391385607d7af432b63905fcc9">&#9670;&#160;</a></span>TIM3</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TIM3&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40000400UL)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a91a09bad8bdc7a1cb3d85cf49c94c8ec" name="a91a09bad8bdc7a1cb3d85cf49c94c8ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91a09bad8bdc7a1cb3d85cf49c94c8ec">&#9670;&#160;</a></span>TIM4</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TIM4&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40000800UL)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a5125ff6a23a2ed66e2e19bd196128c14" name="a5125ff6a23a2ed66e2e19bd196128c14"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5125ff6a23a2ed66e2e19bd196128c14">&#9670;&#160;</a></span>TIM5</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TIM5&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40000C00UL)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac7b4ed55f9201b498b38c962cca97314" name="ac7b4ed55f9201b498b38c962cca97314"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac7b4ed55f9201b498b38c962cca97314">&#9670;&#160;</a></span>TIM6</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TIM6&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40001000UL)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a49267c49946fd61db6af8b49bcf16394" name="a49267c49946fd61db6af8b49bcf16394"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a49267c49946fd61db6af8b49bcf16394">&#9670;&#160;</a></span>TIM7</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TIM7&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40001400UL)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9a3660400b17735e91331f256095810e" name="a9a3660400b17735e91331f256095810e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a3660400b17735e91331f256095810e">&#9670;&#160;</a></span>TIM8</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TIM8&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40010400UL)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af52b4b4c36110a0addfa98059f54a50e" name="af52b4b4c36110a0addfa98059f54a50e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af52b4b4c36110a0addfa98059f54a50e">&#9670;&#160;</a></span>TIM9</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define TIM9&#160;&#160;&#160;((<a class="el" href="structTIM__TypeDef.html">TIM_TypeDef</a> *) 0x40014000UL)</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-</div><!-- contents -->
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8

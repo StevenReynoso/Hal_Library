@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>STM32 HAL Library: A HAL (Hardware Abstract Layer) for the STM32f4 chip.</title>
+<title>STM32 HAL Library: STM32F4 HAL Library (Bare-Metal)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -69,20 +69,131 @@ $(function() {
 
 </div><!-- top -->
 <div><div class="header">
-  <div class="headertitle"><div class="title">A HAL (Hardware Abstract Layer) for the STM32f4 chip.</div></div>
+  <div class="headertitle"><div class="title">STM32F4 HAL Library (Bare-Metal)</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="autotoc_md7"></a> </p>
-<h1><a class="anchor" id="autotoc_md8"></a>
-Features:</h1>
+<div class="textblock"><p><a class="anchor" id="autotoc_md7"></a> This project is a custom Hardware Abstraction Layer (HAL) for the STM32F4 microcontroller series, specifically designed for the STM32F446RE. It provides direct, register-level control without relying on the STM32 HAL or CMSIS libraries. Built for learning purposes and to show what is going on underneath the hood.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md9"></a>
+Features</h1>
 <ul>
-<li>GPIO, easy initialization for ports and pins.</li>
-<li>RCC enabling, giving full clock control for peripherals</li>
-<li>SPI control - master mode full duplex transfer</li>
-<li>Systick delay in MS and US</li>
-<li>TIM initialization with customization</li>
-<li>UART Reading Writing and Configuring. </li>
+<li><b>GPIO</b> – Configure, read, write, and set alternate functions.</li>
+<li><b>RCC</b> – Enable peripheral clocks manually.</li>
+<li><b>SPI</b> – Master mode, full-duplex SPI support.</li>
+<li><b>Systick</b> – Microsecond and millisecond delay functionality.</li>
+<li><b>TIM</b> – Timer initialization and basic configuration.</li>
+<li><b>UART</b> – Transmit, receive, and configure UART communication.</li>
 </ul>
+<hr  />
+<h1><a class="anchor" id="autotoc_md11"></a>
+File Structure</h1>
+<div class="fragment"><div class="line">Hal_Library/</div>
+<div class="line">├── core/                  # Contains main.c</div>
+<div class="line">├── src/                   # All peripheral source files (hal_gpio.c, etc.)</div>
+<div class="line">├── include/               # Public headers (hal_gpio.h, etc.)</div>
+<div class="line">│   └── registers/         # Peripheral register mappings (stm32f4_gpio.h, etc.)</div>
+<div class="line">├── platform/stm32f4/      # Contains Startup file and linker script</div>
+<div class="line">├── build/                 # Build artifacts (generated)</div>
+<div class="line">├── Makefile               # Build system</div>
+<div class="line">└── README.md              # This file</div>
+</div><!-- fragment --><hr  />
+<h1><a class="anchor" id="autotoc_md13"></a>
+Getting Started</h1>
+<h2><a class="anchor" id="autotoc_md14"></a>
+Dependencies</h2>
+<ul>
+<li><code>arm-none-eabi-gcc</code></li>
+<li><code>stlink-tools</code> (provides <code>st-flash</code> and <code>st-util</code> for ST-Link programming/debugging)</li>
+</ul>
+<p>Install with:</p>
+<div class="fragment"><div class="line">sudo apt install gcc-arm-none-eabi stlink-tools</div>
+</div><!-- fragment --><hr  />
+<h1><a class="anchor" id="autotoc_md16"></a>
+Build Commands</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Command   </th><th class="markdownTableHeadNone">Description    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>make</code>   </td><td class="markdownTableBodyNone">Compiles all source files and links the ELF    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>make clean</code>   </td><td class="markdownTableBodyNone">Removes the <code>build/</code> directory    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone"><code>make flash</code>   </td><td class="markdownTableBodyNone">Flashes the <code>.bin</code> to STM32 via ST-Link    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone"><code>make debug</code>   </td><td class="markdownTableBodyNone">Launches <code>st-util</code> and opens GDB   </td></tr>
+</table>
+<hr  />
+<h1><a class="anchor" id="autotoc_md18"></a>
+Flashing Notes</h1>
+<ul>
+<li>Ensure the STM32 is connected via ST-Link and powered on.</li>
+<li>Flashing uses <code>st-flash</code>. The address <code>0x08000000</code> is the flash start.</li>
+<li>You may need <code>sudo</code> depending on udev rules:</li>
+</ul>
+<div class="fragment"><div class="line">sudo make flash</div>
+</div><!-- fragment --><hr  />
+<h1><a class="anchor" id="autotoc_md20"></a>
+Debugging Guide</h1>
+<ol type="1">
+<li>Connect your board via USB ST-Link.</li>
+<li>Start <code>st-util</code> manually.</li>
+<li>Launch GDB (use <code>gdb-multiarch</code> if needed):</li>
+</ol>
+<div class="fragment"><div class="line">gdb-multiarch build/main.elf</div>
+</div><!-- fragment --><ol type="1">
+<li>In GDB:</li>
+</ol>
+<div class="fragment"><div class="line">(gdb) target extended-remote :4242</div>
+<div class="line">(gdb) monitor reset halt</div>
+<div class="line">(gdb) continue</div>
+</div><!-- fragment --><p>Optional GDB commands:</p>
+<ul>
+<li><code>step</code> (single instruction)</li>
+<li><code>break &lt;function&gt;</code> (set breakpoint)</li>
+<li>info registers (shows registers)</li>
+<li>x/10i $pc (disassemble instructions at PC)</li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="autotoc_md22"></a>
+Doxygen Documentation</h1>
+<p>To view the generated documentation in your browser, use the helper script:</p>
+<div class="fragment"><div class="line">./open_docs.sh</div>
+</div><!-- fragment --><p>If the documentation hasn’t been generated yet, run:</p>
+<div class="fragment"><div class="line">doxygen Doxyfile</div>
+</div><!-- fragment --> <h1><a class="anchor" id="autotoc_md23"></a>
+* Output HTML goes to &lt;tt&gt;docs/html/index.html&lt;/tt&gt; by default.</h1>
+<h1><a class="anchor" id="autotoc_md24"></a>
+Common Issues</h1>
+<h2><a class="anchor" id="autotoc_md25"></a>
+"No rule to make target 'startup.s'"</h2>
+<ul>
+<li><b>Cause:</b> Wrong path to startup file.</li>
+<li><p class="startli"><b>Fix:</b> Update <code>STARTUP</code> variable in <code>Makefile</code>:</p>
+<div class="fragment"><div class="line">STARTUP = platform/stm32f4/startup.s</div>
+</div><!-- fragment --></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md26"></a>
+"undefined reference to `main`"</h2>
+<ul>
+<li><b>Cause:</b> The linker can't find your <code><a class="el" href="main_8c.html#a840291bc02cba5474a4cb46a9b9566fe">main()</a></code> function.</li>
+<li><b>Fix:</b> Ensure <code><a class="el" href="main_8c.html" title="Entry point for STM32F411RE user application.">core/main.c</a></code> is included in <code>SRC_DIR</code> or explicitly added.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md27"></a>
+"cannot open file 'st-flash'"</h2>
+<ul>
+<li><b>Cause:</b> ST-Link utilities not installed.</li>
+<li><p class="startli"><b>Fix:</b></p>
+<div class="fragment"><div class="line">sudo apt install stlink-tools</div>
+</div><!-- fragment --></li>
+</ul>
+<hr  />
+<h1><a class="anchor" id="autotoc_md29"></a>
+Contribution Notes</h1>
+<p>This HAL was built for educational purposes and kept intentionally minimal. Contributions, testing, and refactors are welcome. This library avoids all vendor dependencies for clarity and control.</p>
+<hr  />
+<h1><a class="anchor" id="autotoc_md31"></a>
+License</h1>
+<p>MIT License – Use and modify freely. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

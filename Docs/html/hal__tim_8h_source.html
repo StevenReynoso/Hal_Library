@@ -82,18 +82,27 @@ $(document).ready(function() { init_codefold(0); });
 </div><!--header-->
 <div class="contents">
 <a href="hal__tim_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef HAL_TIM_H</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define HAL_TIM_H</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="stm32f4__tim_8h.html">stm32f4_tim.h</a>&quot;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keywordtype">void</span> <a class="code hl_function" href="hal__tim_8h.html#a49ad05cc6dff6fada2b6e489c9fa03f4">tim_1hz_init</a>(<a class="code hl_struct" href="structTIM__TypeDef.html">TIM_TypeDef</a> *timx, uint32_t clk_hz);</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">#endif </span><span class="comment">// HAL_TIM_H</span></div>
-<div class="ttc" id="ahal__tim_8h_html_a49ad05cc6dff6fada2b6e489c9fa03f4"><div class="ttname"><a href="hal__tim_8h.html#a49ad05cc6dff6fada2b6e489c9fa03f4">tim_1hz_init</a></div><div class="ttdeci">void tim_1hz_init(TIM_TypeDef *timx, uint32_t clk_hz)</div><div class="ttdoc">Initializes the specified timer to generate a 1 Hz timebase.</div><div class="ttdef"><b>Definition</b> hal_tim.c:26</div></div>
-<div class="ttc" id="astm32f4__tim_8h_html"><div class="ttname"><a href="stm32f4__tim_8h.html">stm32f4_tim.h</a></div><div class="ttdoc">STM32F446RE Timer peripheral base addresses and register map.</div></div>
-<div class="ttc" id="astructTIM__TypeDef_html"><div class="ttname"><a href="structTIM__TypeDef.html">TIM_TypeDef</a></div><div class="ttdoc">Register map for STM32F4 TIMx peripheral.</div><div class="ttdef"><b>Definition</b> stm32f4_tim.h:52</div></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#ifndef HAL_TIM_H</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#define HAL_TIM_H</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;stdint.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &quot;<a class="code" href="stm32f4__tim_8h.html">stm32f4_tim.h</a>&quot;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__HAL__TIM__Functions.html#ga49ad05cc6dff6fada2b6e489c9fa03f4">tim_1hz_init</a>(<a class="code hl_struct" href="structTIM__TypeDef.html">TIM_TypeDef</a> *timx, uint32_t clk_hz);</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__HAL__TIM__Functions.html#gacc8258753267f07e8764d87dee7fd753">tim_pwm_init</a>(<a class="code hl_struct" href="structTIM__TypeDef.html">TIM_TypeDef</a> *timx, uint16_t prescaler, uint16_t arr);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__HAL__TIM__Functions.html#ga5f6414204eaa9c35c9138eba8b628d69">tim_pwm_config_channel</a>(<a class="code hl_struct" href="structTIM__TypeDef.html">TIM_TypeDef</a> *timx, uint8_t channel, uint16_t duty);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keywordtype">void</span> <a class="code hl_function" href="group__HAL__TIM__Functions.html#gad1388d8ba166aa2d1f901889b6f74357">tim_pwm_start</a>(<a class="code hl_struct" href="structTIM__TypeDef.html">TIM_TypeDef</a> *timx);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="preprocessor">#endif </span><span class="comment">// HAL_TIM_H</span></div>
+<div class="ttc" id="agroup__HAL__TIM__Functions_html_ga49ad05cc6dff6fada2b6e489c9fa03f4"><div class="ttname"><a href="group__HAL__TIM__Functions.html#ga49ad05cc6dff6fada2b6e489c9fa03f4">tim_1hz_init</a></div><div class="ttdeci">void tim_1hz_init(TIM_TypeDef *timx, uint32_t clk_hz)</div><div class="ttdoc">Initializes the specified timer to generate a 1 Hz overflow.</div><div class="ttdef"><b>Definition</b> hal_tim.c:36</div></div>
+<div class="ttc" id="agroup__HAL__TIM__Functions_html_ga5f6414204eaa9c35c9138eba8b628d69"><div class="ttname"><a href="group__HAL__TIM__Functions.html#ga5f6414204eaa9c35c9138eba8b628d69">tim_pwm_config_channel</a></div><div class="ttdeci">void tim_pwm_config_channel(TIM_TypeDef *timx, uint8_t channel, uint16_t duty)</div><div class="ttdoc">Configures a specific channel of the timer for PWM output.</div><div class="ttdef"><b>Definition</b> hal_tim.c:90</div></div>
+<div class="ttc" id="agroup__HAL__TIM__Functions_html_gacc8258753267f07e8764d87dee7fd753"><div class="ttname"><a href="group__HAL__TIM__Functions.html#gacc8258753267f07e8764d87dee7fd753">tim_pwm_init</a></div><div class="ttdeci">void tim_pwm_init(TIM_TypeDef *timx, uint16_t prescaler, uint16_t arr)</div><div class="ttdoc">Initializes a timer for PWM output.</div><div class="ttdef"><b>Definition</b> hal_tim.c:64</div></div>
+<div class="ttc" id="agroup__HAL__TIM__Functions_html_gad1388d8ba166aa2d1f901889b6f74357"><div class="ttname"><a href="group__HAL__TIM__Functions.html#gad1388d8ba166aa2d1f901889b6f74357">tim_pwm_start</a></div><div class="ttdeci">void tim_pwm_start(TIM_TypeDef *timx)</div><div class="ttdoc">Starts the timer counter (CEN = 1).</div><div class="ttdef"><b>Definition</b> hal_tim.c:118</div></div>
+<div class="ttc" id="astm32f4__tim_8h_html"><div class="ttname"><a href="stm32f4__tim_8h.html">stm32f4_tim.h</a></div><div class="ttdoc">Register map and base addresses for STM32F446RE TIM peripherals.</div></div>
+<div class="ttc" id="astructTIM__TypeDef_html"><div class="ttname"><a href="structTIM__TypeDef.html">TIM_TypeDef</a></div><div class="ttdoc">TIMx register map structure.</div><div class="ttdef"><b>Definition</b> stm32f4_tim.h:70</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
