@@ -90,10 +90,11 @@ gdb-multiarch build/main.elf
 
 Optional GDB commands:
 
-* `step`             (single instruction)
-* `break <function>` (set breakpoint)
-* info registers     (shows registers)
-* x/10i $pc          (disassemble instructions at PC)
+* `step`               (single instruction)
+* `next`               (steps through)
+* `break <function>`   (set breakpoint)
+* `info registers`     (shows registers)
+* `x/10i $pc`          (disassemble instructions at PC)
 
 
 ---
